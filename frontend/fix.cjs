@@ -1,0 +1,1 @@
+﻿const fs = require('fs'); let c = fs.readFileSync('src/App.jsx', 'utf8'); c = c.replace('import { showToast }', 'import { toast }'); c = c.replace('showToast(', 'toast.success('); c = c.replace(/, ''success''\);/, ');'); fs.writeFileSync('src/App.jsx', c);
